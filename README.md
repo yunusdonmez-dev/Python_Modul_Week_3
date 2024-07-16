@@ -1,7 +1,5 @@
 # Python_Modul_Week_3
 
-# VIT4_Python_Modul_Week_3
-
 ### Question 1: Task Manager Application
 
 Project Description: In this assignment, you will create a task manager application using the Python programming language. This application will allow users to add, complete, delete, and list their tasks.
