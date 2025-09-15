@@ -68,99 +68,104 @@ Create an instance of each class, determine its properties, and write a program 
 Create these two classes, then create a Customer object and an Account object, add the customer information to the Account object, and perform account operations and view the results.
 
 ## Mini Project
-Library Management System Design
-Book (base class)
+# 📚 Library Management System
 
-Attributes:
+A simple **Library Management System** written in Python.  
+It allows users to borrow and return books, manage accounts, and store data in a JSON file so the system continues from where it left off.
 
-title
+---
 
-author
+## 🚀 Features
+- User login & account creation  
+- Borrow and return books  
+- View all available books  
+- Track borrowed books  
+- Data persistence with JSON (save & load)
 
-publication_year
+---
 
-is_borrowed
+## 🏗️ Class Design
 
-borrowed_by
+### `Book` (base class)
+**Attributes**
+- `title`
+- `author`
+- `publication_year`
+- `is_borrowed`
+- `borrowed_by`
 
-Methods:
+**Methods**
+- `show_info()`
+- `borrow(user)`
+- `return_book()`
+- `to_dict()`
 
-show_info()
+---
 
-borrow(user)
+### `Novel` (inherits `Book`)
+- Additional attribute: `genre`
 
-return_book()
+### `Magazine` (inherits `Book`)
+- Additional attribute: `issue`
 
-to_dict()
+---
 
-Novel and Magazine (inheritance from Book)
+### `User`
+**Attributes**
+- `name`
+- `password`
+- `borrowed_books`
 
-Novel: additional attribute → genre
+**Methods**
+- `borrow_book(book)`
+- `return_book(book)`
+- `list_borrowed_books()`
+- `to_dict()`
 
-Magazine: additional attribute → issue
+---
 
-User
+### `Library`
+**Attributes**
+- `name`
+- `books`
+- `users`
 
-Attributes:
+**Methods**
+- `add_book(book)`
+- `add_user(user)`
+- `show_all_books()`
+- `login(name, password)`
+- `save(file)` → saves all data to JSON  
+- `load(file)` → loads data from JSON and restores relationships
 
-name
+---
 
-password
+## 📋 Program Flow
 
-borrowed_books
-
-Methods:
-
-borrow_book(book)
-
-return_book(book)
-
-list_borrowed_books()
-
-to_dict()
-
-Library
-
-Attributes:
-
-name
-
-books
-
-users
-
-Methods:
-
-add_book(book)
-
-add_user(user)
-
-show_all_books()
-
-login(name, password)
-
-save(file) → Saves to a JSON file
-
-load(file) → Loads from JSON and restores book–user relationships
-
-Program Flow
-
-On startup, the login screen appears.
-
-The user logs in or creates a new account.
-
-After login, the menu is shown:
-
-1 - List all books
-2 - Borrow a book
-3 - Return a book
-4 - Show my borrowed books
-5 - Save and exit
+1. On startup, a **login screen** is shown.  
+2. The user can log in or create a new account.  
+3. Menu options:
 
 
-On exit, all data is saved into a JSON file.
+4. On exit, all data is saved to a JSON file.  
+5. On the next run, the system loads the saved state and continues.
 
-On the next run, the system loads the saved state and continues from where it left off.
+---
+
+## 💾 Persistence
+- All books, users, and borrowing states are stored in a **JSON file**.  
+- When the program restarts, the data is reloaded so nothing is lost.
+
+---
+
+## 🔮 Future Improvements
+- Admin panel for adding/removing books  
+- Due dates and late return penalties  
+- Search and filter books by author/genre/year  
+- GUI version with Tkinter or a web interface
+
+---
+
 
 ## HackerRank Questions
 
