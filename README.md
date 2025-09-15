@@ -67,6 +67,101 @@ Create an instance of each class, determine its properties, and write a program 
 
 Create these two classes, then create a Customer object and an Account object, add the customer information to the Account object, and perform account operations and view the results.
 
+## Mini Project
+Library Management System Design
+Book (base class)
+
+Attributes:
+
+title
+
+author
+
+publication_year
+
+is_borrowed
+
+borrowed_by
+
+Methods:
+
+show_info()
+
+borrow(user)
+
+return_book()
+
+to_dict()
+
+Novel and Magazine (inheritance from Book)
+
+Novel: additional attribute → genre
+
+Magazine: additional attribute → issue
+
+User
+
+Attributes:
+
+name
+
+password
+
+borrowed_books
+
+Methods:
+
+borrow_book(book)
+
+return_book(book)
+
+list_borrowed_books()
+
+to_dict()
+
+Library
+
+Attributes:
+
+name
+
+books
+
+users
+
+Methods:
+
+add_book(book)
+
+add_user(user)
+
+show_all_books()
+
+login(name, password)
+
+save(file) → Saves to a JSON file
+
+load(file) → Loads from JSON and restores book–user relationships
+
+Program Flow
+
+On startup, the login screen appears.
+
+The user logs in or creates a new account.
+
+After login, the menu is shown:
+
+1 - List all books
+2 - Borrow a book
+3 - Return a book
+4 - Show my borrowed books
+5 - Save and exit
+
+
+On exit, all data is saved into a JSON file.
+
+On the next run, the system loads the saved state and continues from where it left off.
+
 ## HackerRank Questions
 
 * **Inheritance:** https://www.hackerrank.com/challenges/inheritance/problem
