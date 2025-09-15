@@ -162,14 +162,6 @@ It allows users to borrow and return books, manage accounts, and store data in a
 
 ---
 
-## 🔮 Future Improvements
-- Admin panel for adding/removing books  
-- Due dates and late return penalties  
-- Search and filter books by author/genre/year  
-- GUI version with Tkinter or a web interface
-
----
-
 
 ## HackerRank Questions
 
