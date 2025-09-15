@@ -145,7 +145,11 @@ It allows users to borrow and return books, manage accounts, and store data in a
 1. On startup, a **login screen** is shown.  
 2. The user can log in or create a new account.  
 3. Menu options:
-
+- 1 - List all books
+- 2 - Borrow a book
+- 3 - Return a book
+- 4 - Show my borrowed books
+- 5 - Save and exit
 
 4. On exit, all data is saved to a JSON file.  
 5. On the next run, the system loads the saved state and continues.
